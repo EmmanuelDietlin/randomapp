@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.randomapp">
+    
+    <uses-permission android:name="android.permission.INTERNET"> </uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RandomApp">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ShareActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.shareActivity" >
+                </action>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RandomCommitsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.randomCommitsActivity" >
+                </action>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RandomPicturesActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.randomPicturesActivity" >
+                </action>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RandomUsersActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.randomUsersActivity" >
+                </action>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DatabaseActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.databaseActivity" >
+                </action>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

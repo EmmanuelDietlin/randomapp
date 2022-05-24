@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:text="Bienvenue sur RandomApp, où vous pourrez trouver toute sorte de contenu aléatoire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/generateMetaphore"
+        android:layout_width="182dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#19cfaa"
+        android:text="Générer une métaphore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainText" />
+
+    <TextView
+        android:id="@+id/metaphore"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:layout_marginTop="8dp"
+        android:text="Metaphore :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/generateMetaphore" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="149dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:backgroundTint="#14a9db"
+        android:text="Sauvegarder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/metaphore" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="149dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="Partager"
+        android:backgroundTint="#14a9db"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/metaphore" />
+
+    <Button
+        android:id="@+id/randomUsersButton"
+        android:layout_width="170dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="104dp"
+        android:text="Utilisateurs aléatoires"
+        android:backgroundTint="#165edb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/metaphore" />
+
+    <Button
+        android:id="@+id/randomPicturesButton"
+        android:layout_width="168dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="28dp"
+        android:text="Images aléatoires"
+        android:backgroundTint="#165edb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomUsersButton" />
+
+    <Button
+        android:id="@+id/randomCommitButton"
+        android:layout_width="168dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Messages de commit"
+        android:backgroundTint="#6e26d4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomPicturesButton" />
+
+    <Button
+        android:id="@+id/savedMetaphorsButton"
+        android:layout_width="172dp"
+        android:layout_height="54dp"
+        android:text="Métaphores sauvegardées"
+        android:backgroundTint="#6e26d4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomCommitButton"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <SeekBar
+        android:id="@+id/lenghtbar"
+        android:layout_width="171dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="4dp"
+        android:max="5"
+        android:min="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toEndOf="@+id/generateMetaphore"
+        app:layout_constraintTop_toBottomOf="@+id/mainText" />
+
+    <TextView
+        android:id="@+id/plain_text"
+        android:layout_width="62dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
+        android:text="phrase(s)"
+        app:layout_constraintBottom_toTopOf="@+id/metaphore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lenghtvalue" />
+
+    <TextView
+        android:id="@+id/lenghtvalue"
+        android:layout_width="15dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/metaphore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toEndOf="@+id/generateMetaphore" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
